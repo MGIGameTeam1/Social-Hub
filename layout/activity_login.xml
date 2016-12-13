@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mgi.kelasku.LoginActivity"
+    android:background="@color/colorTheme">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imglogintitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_splash"
+            android:layout_margin="45dp"/>
+
+        <EditText
+            android:id="@+id/ETEmail"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Email"
+            android:textColorHint="@color/gray"
+            android:background="@color/putih"
+            android:textColor="@color/hitam"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:inputType="text"/>
+
+        <View style="@style/Divider"
+            android:layout_below="@+id/ETEmail"/>
+
+        <EditText
+            android:id="@+id/ETPassword"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Password"
+            android:textColorHint="@color/gray"
+            android:background="@color/putih"
+            android:textColor="@color/hitam"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:background="@color/gray"
+            android:layout_below="@+id/ETPassword"
+            android:layout_marginBottom="10dp"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Belum punya akun KelasKu?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/txtloginregister"
+                android:textColor="@color/navy"
+                android:layout_alignParentLeft="true"
+                android:padding="10dp"
+                android:layout_toLeftOf="@+id/btnloginregister"/>
+
+            <Button
+                android:text="register"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnloginregister"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:text="Lupa password?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:id="@+id/txtRecover"
+                android:textColor="@color/navy"
+                android:padding="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/btnloginrecover"
+                android:layout_toStartOf="@+id/btnloginrecover" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnloginrecover"
+                android:text="recover"
+                android:layout_below="@+id/btnloginregister"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
